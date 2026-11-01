@@ -1,17 +1,30 @@
+import java.util.Scanner;
+
 public class GestionNotes {
     public static void main(String[] args){
         System.out.println("==============================");
         System.out.println("RELEVE DE NOTE - L2");
         System.out.println("==============================");
 
+
+        Scanner clavier = new Scanner(System.in);
         String prenom = "Awa";
         String nom = "Ndiaye";
         int age = 20;
         String matricule = "ISI-2026-0142";
 
 
-        System.out.println("Etudiant : " + prenom + " " + nom + " (" + age + " ans)");
-        System.out.println("Matricule :" + matricule);
+        System.out.println("Entrer prenom");
+        prenom = clavier.nextLine();
+        System.out.println("Entrer nom");
+        nom = clavier.nextLine();
+        System.out.println("Entrer age");
+        age = clavier.nextInt();
+        clavier.nextLine();
+        System.out.println("Enter votre matricule :");
+        matricule = clavier.nextLine();
+        clavier.close();
+
 
     }
 }
