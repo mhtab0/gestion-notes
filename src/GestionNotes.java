@@ -55,9 +55,17 @@ public class GestionNotes {
 
         int sommeCoefs = COEF_ALGO + COEF_BD + COEF_ANG;
         double moyenneGenerale = (moyenneAlgo * COEF_ALGO + moyenneBD * COEF_BD + moyenneANG * COEF_ANG) / sommeCoefs;
-        System.out.println("Brut : " + moyenneAlgo + " | " + moyenneBD + " | " + moyenneANG + " | " + moyenneGenerale);
 
-        clavier.close();
+        System.out.printf("Algorithmique  (coef %d) : %.2f\n", COEF_ALGO, moyenneAlgo);
+        System.out.printf("Base de données (coef %d) : %.2f\n", COEF_BD, moyenneBD);
+        System.out.printf("Anglais         (coef %d) : %.2f\n", COEF_ANG, moyenneANG);
+
+        System.out.println("------------------------------------");
+        System.out.printf("Moyenne générale          : %.2f\n", moyenneGenerale);
+        System.out.println("====================================");
+
+
+    clavier.close();
 
 
 
