@@ -14,6 +14,7 @@ public class GestionNotes {
         String matricule = "ISI-2026-0142";
 
 
+
         System.out.println("Entrer prenom");
         prenom = clavier.nextLine();
         System.out.println("Entrer nom");
@@ -24,6 +25,11 @@ public class GestionNotes {
         System.out.println("Enter votre matricule :");
         matricule = clavier.nextLine();
         clavier.close();
+        final double devoir = 0.4;
+        final double examen = 0.6;
+        final int COEF_ALGO = 3;
+        final int COEF_BD = 2;
+        final int COEF_ANG = 1;
 
 
     }
