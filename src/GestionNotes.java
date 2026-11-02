@@ -25,8 +25,8 @@ public class GestionNotes {
         System.out.println("Enter votre matricule :");
         matricule = clavier.nextLine();
 
-        final double POIDS_devoir = 0.4;
-        final double POIDS_examen = 0.6;
+        final double POIDS_DEVOIR = 0.4;
+        final double POIDS_EXAMEN = 0.6;
         final int COEF_ALGO = 3;
         final int COEF_BD = 2;
         final int COEF_ANG = 1;
@@ -49,11 +49,14 @@ public class GestionNotes {
         System.out.println("Saisir note examen ANG");
         double examenANG = clavier.nextDouble();
 
-        double moyenneAlgo = devoirAlgo * POIDS_devoir + examenAlgo * POIDS_examen;
-        double moyenneBD = devoirBD * POIDS_devoir + examenBD * POIDS_examen;
-        double moyenneANG = devoirANG * POIDS_devoir + examenANG * POIDS_examen;
+        double moyenneAlgo = devoirAlgo * POIDS_DEVOIR + examenAlgo * POIDS_EXAMEN;
+        double moyenneBD = devoirBD * POIDS_DEVOIR + examenBD * POIDS_EXAMEN;
+        double moyenneANG = devoirANG * POIDS_DEVOIR + examenANG * POIDS_EXAMEN;
 
-        System.out.println("Brut : " + moyenneAlgo + " | " + moyenneBD + " | " + moyenneANG);
+        int sommeCoefs = COEF_ALGO + COEF_BD + COEF_ANG;
+        double moyenneGenerale = (moyenneAlgo * COEF_ALGO + moyenneBD * COEF_BD + moyenneANG * COEF_ANG) / sommeCoefs;
+        System.out.println("Brut : " + moyenneAlgo + " | " + moyenneBD + " | " + moyenneANG + " | " + moyenneGenerale);
+
         clavier.close();
 
 
